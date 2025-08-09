@@ -18,6 +18,9 @@ export default defineConfig(({ mode }) => ({
     outDir: "dist/spa",
   },
   plugins: [react(), expressPlugin()],
+  define: {
+    'process.env': process.env
+  },
   base:process.env.VITE_FIREBASE_API_KEY ||"/Watheeq",
   resolve: {
     alias: {
