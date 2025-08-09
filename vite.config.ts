@@ -18,6 +18,7 @@ export default defineConfig(({ mode }) => ({
     outDir: "dist/spa",
   },
   plugins: [react(), expressPlugin()],
+  base:process.env.VITE_FIREBASE_API_KEY ||"/Watheeq",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./client"),
